@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-lg-5 col-md-12 mt-4 mb-4">
+        <app-registrar *ngIf="componentes.registrarComponent" (salida)="obtenerUsuarios()"></app-registrar>
+        <app-actualizar *ngIf="componentes.actualizarComponent" [componentes]="componentes" [usuario]="usuario" (salida)="obtenerUsuarios()"></app-actualizar>
+    </div>
+    <div class="col-lg-7 col-md-12 mt-4 mb-4">
+        <app-tabla *ngIf="componentes.tablaComponent" [componentes]="componentes" [usuarios]="usuarios" (salida)="obtenerUsuario($event)" (actualizarUsuarios)="obtenerUsuarios()"></app-tabla>
+    </div>
+</div>
